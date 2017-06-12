@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=Equipo(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Equipo\r\n
+comment1.params=nombre
+comment1.target=void\ cambiarNombre(java.lang.String)
+comment1.text=\r\n\ lee\ la\ informacion\ de\ los\ participantes\ de\ un\ equipo\ \r\n\ @param\ nombre\ Es\ el\ nombre\ del\ equipo\ \r\n
+comment2.params=nombre\ carrera\ numero
+comment2.target=void\ crearParticipante(java.lang.String,\ java.lang.String,\ int)
+comment2.text=\r\n\ Registrar\ los\ participantes\ individualmente\r\n
+comment3.params=
+comment3.target=void\ leerArchivo()
+comment3.text=\r\n\ lee\ la\ informacion\ de\ los\ participantes\ de\ un\ equipo\ \r\n
+comment4.params=p
+comment4.target=void\ guardarParticipantes(Participante)
+comment4.text=\r\n\ Guarda\ la\ informacion\ de\ los\ participantes\ en\ una\ coleccion\r\n
+comment5.params=
+comment5.target=void\ imprimirParticipantes()
+comment5.text=\r\n\ Imprime\ los\ miembros\ del\ torneo\ actualmente\ inscritos\r\n
+comment6.params=
+comment6.target=java.lang.String\ getNombreEquipo()
+numComments=7

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GestorTorneos()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ GestorTorneos\r\n
+comment1.params=
+comment1.target=void\ crearTorneo()
+comment1.text=\r\n\ Crea\ un\ torneo\ \ \ \ \ \ \r\n
+comment2.params=
+comment2.target=void\ consultarTorneos()
+comment2.text=\r\n\ Consulta\ los\ torneos\ que\ estan\ en\ marcha\ \ \ \ \ \ \r\n
+numComments=3
