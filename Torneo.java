@@ -11,8 +11,7 @@ public class Torneo
     // instance variables - replace the example below with your own
     private String nombre;
     private Fixture fixture;
-    private Grupo grupoA;
-    private Grupo grupoB;
+    private Grupo grupo;
     private ArrayList<Grupo> grupos;
     private ArrayList<Equipo> equipos;    
     private Equipo eqp;
@@ -25,10 +24,6 @@ public class Torneo
     {
          equipos = new ArrayList<Equipo>();
          grupos = new ArrayList<Grupo>();
-         grupoA = new Grupo();
-         grupoB = new Grupo();
-         crearGrupos(grupoA);
-         crearGrupos(grupoB);
          rnd = new Random();
     }
       

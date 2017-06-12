@@ -62,7 +62,7 @@ public class Equipo
     {
         for(Participante p : miembros )
         {
-            System.out.println("Nombre participante: "+p.getNombre() + "\n Carrera: " + p.getCarrera());
+            System.out.println("> Nombre participante: "+p.getNombre() + "\n Carrera: " + p.getCarrera());
         }
     }
     
