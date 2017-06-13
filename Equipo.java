@@ -15,6 +15,7 @@ public class Equipo
 
     /**
      * Constructor for objects of class Equipo
+     * @param nombre Nombre del Equipo
      */
     public Equipo(String nombre)
     {    
@@ -24,7 +25,7 @@ public class Equipo
     
     /**
      * lee la informacion de los participantes de un equipo 
-     * @param nombre Es el nombre del equipo 
+     * @param nombre Nombre del equipo
      */    
     public void cambiarNombre(String nombre)
     {

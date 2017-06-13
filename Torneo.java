@@ -13,7 +13,8 @@ public class Torneo
     private Fixture fixture;
     private Grupo grupo;
     private ArrayList<Grupo> grupos;
-    private ArrayList<Equipo> equipos;    
+    private ArrayList<Equipo> equipos;
+    private ArrayList<Participante> participantes;   
     private Equipo eqp;
     private Random rnd;
 
@@ -24,6 +25,7 @@ public class Torneo
     {
          equipos = new ArrayList<Equipo>();
          grupos = new ArrayList<Grupo>();
+         participantes = new ArrayList<Participante>();
          rnd = new Random();
     }
       
@@ -49,7 +51,7 @@ public class Torneo
     }
     
     /**
-     * Crea los grupos de acuerdo a la cantidad de participantes aleatoriamente
+     * Añade elementos tipo grupo a la lista de Grupos
      */
     public void crearGrupos(Grupo g)
     {
@@ -76,6 +78,16 @@ public class Torneo
                 
             }
         }
+    }
+
+    /**
+     * Crea participantes o jugadores
+     * @param nombre Nombre del participante
+     * @param carrera Carrera que cursa el participante
+     * @param numero Numero en la dorsal del participante
+     */
+    public void crearParticipante(String nombre, String carrera, int numero){
+        participantes.add(new Participante(nombre, carrera, numero));
     }
 
     /**
