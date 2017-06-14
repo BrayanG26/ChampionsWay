@@ -15,7 +15,6 @@ public class Equipo
 
     /**
      * Constructor for objects of class Equipo
-     * @param nombre Nombre del Equipo
      */
     public Equipo(String nombre)
     {    
@@ -25,7 +24,7 @@ public class Equipo
     
     /**
      * lee la informacion de los participantes de un equipo 
-     * @param nombre Nombre del equipo
+     * @param nombre Es el nombre del equipo 
      */    
     public void cambiarNombre(String nombre)
     {
@@ -63,7 +62,7 @@ public class Equipo
     {
         for(Participante p : miembros )
         {
-            System.out.println("> Nombre participante: "+p.getNombre() + "\n Carrera: " + p.getCarrera());
+            System.out.println("Nombre participante: "+p.getNombre() + "\n Carrera: " + p.getCarrera());
         }
     }
     

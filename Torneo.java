@@ -11,10 +11,10 @@ public class Torneo
     // instance variables - replace the example below with your own
     private String nombre;
     private Fixture fixture;
-    private Grupo grupo;
+    private Grupo grupoA;
+    private Grupo grupoB;
     private ArrayList<Grupo> grupos;
-    private ArrayList<Equipo> equipos;
-    private ArrayList<Participante> participantes;   
+    private ArrayList<Equipo> equipos;    
     private Equipo eqp;
     private Random rnd;
 
@@ -25,7 +25,10 @@ public class Torneo
     {
          equipos = new ArrayList<Equipo>();
          grupos = new ArrayList<Grupo>();
-         participantes = new ArrayList<Participante>();
+         grupoA = new Grupo();
+         grupoB = new Grupo();
+         crearGrupos(grupoA);
+         crearGrupos(grupoB);
          rnd = new Random();
     }
       
@@ -40,6 +43,23 @@ public class Torneo
     }
     
     /**
+     * Buscar un equipo participante del torneo por nombre;
+     */
+    public Equipo buscarEquipo(int num)
+    {
+       return equipos.get(num);
+    }
+    
+    /**
+     * Devuelve el array de equipos del torneo;
+     */
+    public ArrayList<Equipo> getEquipos()
+    {
+       return equipos;
+    }
+    
+    
+    /**
      * Imprime los equipos del torneo actualmente inscritos
      */
     public void imprimirEquipos()
@@ -51,11 +71,19 @@ public class Torneo
     }
     
     /**
-     * Añade elementos tipo grupo a la lista de Grupos
+     * Crea los grupos de acuerdo a la cantidad de participantes aleatoriamente
      */
     public void crearGrupos(Grupo g)
     {
         grupos.add(g);
+    }
+    
+    /**
+     * Devuelve el array de grupos del torneo;
+     */
+    public ArrayList<Grupo> getGrupos()
+    {
+       return grupos;
     }
     
     /**
@@ -81,20 +109,12 @@ public class Torneo
     }
 
     /**
-     * Crea participantes o jugadores
-     * @param nombre Nombre del participante
-     * @param carrera Carrera que cursa el participante
-     * @param numero Numero en la dorsal del participante
-     */
-    public void crearParticipante(String nombre, String carrera, int numero){
-        participantes.add(new Participante(nombre, carrera, numero));
-    }
-
-    /**
      * Asigna el fixture al torneo
      *      
      */
-   public void asignarFixture(){}
+   public void asignarFixture()
+   {
+   }
    
    /**
      * Asigna el nombre al torneo

@@ -30,6 +30,9 @@ public class Grupo
    /**
      * Muestra los equipos de un grupo
      */
-    public void consultarEquipos(){}
+    public void consultarEquipos()
+    {
+        
+    }
    
 }
