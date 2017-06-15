@@ -100,6 +100,7 @@ public class Torneo
     
     /**
      *  Asigna los equipos entre los grupos disponibles del torneo
+     * @param <Equipos>,<Grupos> equipos Equipos para sortear, grupos Grupos para sortear
      */
     public void gruposRandom(ArrayList<Equipo> equipos , ArrayList<Grupo> grupos)
     {

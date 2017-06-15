@@ -13,6 +13,14 @@ public class Demo
     {
         torneo = new Torneo();
         
+        System.out.println("");
+        System.out.println("### -- ### --- ###");
+        System.out.printf("PERMUTACION");
+        Fixture fix = new Fixture();
+        fix.crearEncuentros();
+        System.out.println("");
+        System.out.println("### -- ### --- ###");
+        
         System.out.println("Agrega 4 equipos");
         System.out.println("");
         torneo.crearEquipo("sistemas");
@@ -42,9 +50,6 @@ public class Demo
         torneo.imprimirGrupos();
         System.out.println("Asigna el calendario de encuentros del torneo");
         torneo.asignarFixture(torneo.getGrupos());
-        System.out.println("");
-        
-        
         
     }
 
