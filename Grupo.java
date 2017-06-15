@@ -18,6 +18,7 @@ public class Grupo
     public Grupo(String nombre)
     {    
         this.nombre = nombre;
+        equipos = new ArrayList<Equipo>();
     }
     
     /**

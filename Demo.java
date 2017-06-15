@@ -36,9 +36,10 @@ public class Demo
         System.out.println("");
         torneo.imprimirGrupos();
         System.out.println("Asigna los equipos a los grupos");
-        System.out.println("");
+        System.out.println("");        
         torneo.gruposRandom(torneo.getEquipos(),torneo.getGrupos());
         System.out.println("");
+        torneo.imprimirGrupos();
         System.out.println("Asigna el calendario de encuentros del torneo");
         torneo.asignarFixture(torneo.getGrupos());
         System.out.println("");

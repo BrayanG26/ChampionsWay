@@ -86,7 +86,7 @@ public class Torneo
     {
         for(Grupo gp : grupos )
         {
-            System.out.println("Nombre grupo: "+ gp.getNombre());
+            System.out.println("Info grupo: "+ gp.infoGrupo());
         }
     }
     
@@ -157,7 +157,8 @@ public class Torneo
                cont++;
                fixture.CrearEncuentros(cont, temp.getNombreEquipo() , temp2.getNombreEquipo());
            }
-            
+            System.out.println(cont);
+            System.out.println(equiposSorteados);
        }
        
    }
