@@ -15,8 +15,9 @@ public class Grupo
     /**
      * Constructor for objects of class Grupo
      */
-    public Grupo()
-    {    // initialise instance variables        
+    public Grupo(String nombre)
+    {    
+        this.nombre = nombre;
     }
     
     /**
@@ -26,13 +27,29 @@ public class Grupo
     {
         equipos.add(eq);
     }
+    
+    public String infoGrupo()
+    {
+        String info = nombre + "\n" ;
+        for(Equipo eq: equipos)
+        {
+            info+= " " + eq.getNombreEquipo() + "\n";
+        }
+        
+        return info;
+    }
 
    /**
      * Muestra los equipos de un grupo
      */
-    public void consultarEquipos()
+    public ArrayList<Equipo> getEquipos()
     {
-        
+        return equipos;
+    }
+    
+    public String getNombre()
+    {
+        return nombre;
     }
    
 }

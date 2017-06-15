@@ -9,6 +9,7 @@ public class Equipo
 {
     // instance variables - replace the example below with your own
     private String nombreEquipo;
+    private boolean sorteo;
     private Participante pante;
     private ArrayList<Participante> miembros;
     
@@ -20,6 +21,7 @@ public class Equipo
     {    
         this.nombreEquipo = nombre;
         miembros = new ArrayList<Participante>();
+        sorteo = true;
     }
     
     /**
@@ -69,5 +71,15 @@ public class Equipo
     public String getNombreEquipo()
     {
         return nombreEquipo;
+    }
+    
+    public void disponibilidad(boolean valor)
+    {
+        sorteo = valor;
+    }
+    
+    public boolean getdisponibilidad()
+    {
+        return sorteo;
     }
 }

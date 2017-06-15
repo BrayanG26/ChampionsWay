@@ -25,8 +25,8 @@ public class Torneo
     {
          equipos = new ArrayList<Equipo>();
          grupos = new ArrayList<Grupo>();
-         grupoA = new Grupo();
-         grupoB = new Grupo();
+         grupoA = new Grupo("grupo A");
+         grupoB = new Grupo("grupo B");
          crearGrupos(grupoA);
          crearGrupos(grupoB);
          rnd = new Random();
@@ -78,6 +78,18 @@ public class Torneo
         grupos.add(g);
     }
     
+    
+    /**
+     * Imprime los grupos del torneo actualmente inscritos
+     */
+    public void imprimirGrupos()
+    {
+        for(Grupo gp : grupos )
+        {
+            System.out.println("Nombre grupo: "+ gp.getNombre());
+        }
+    }
+    
     /**
      * Devuelve el array de grupos del torneo;
      */
@@ -94,7 +106,7 @@ public class Torneo
         for(Equipo eq: equipos)
         {
             int temp = rnd.nextInt(grupos.size());
-            
+            System.out.println(temp);
             switch (temp) 
             {
                 case 0: 
@@ -112,8 +124,42 @@ public class Torneo
      * Asigna el fixture al torneo
      *      
      */
-   public void asignarFixture()
+   public void asignarFixture(ArrayList<Grupo> grupos)
    {
+       Equipo temp = null;
+       Equipo temp2 = null;
+       int rand;
+       int cont = 0;
+       int equiposSorteados = 1;
+       fixture = new Fixture();
+       
+       for (Grupo gp: grupos)
+       {
+            rand = rnd.nextInt(gp.getEquipos().size());
+            
+            while(!(equiposSorteados == gp.getEquipos().size()))
+            {
+                if(gp.getEquipos().get(rand).getdisponibilidad() && equiposSorteados%2 == 1)
+                {
+                    temp = gp.getEquipos().get(rand);
+                    gp.getEquipos().get(rand).disponibilidad(false);
+                }
+                
+                if(gp.getEquipos().get(rand).getdisponibilidad() && equiposSorteados%2 == 0)
+                {
+                    temp2 = gp.getEquipos().get(rand);
+                    gp.getEquipos().get(rand).disponibilidad(false);
+                }
+            }
+            
+           if(!(temp.equals(null)&& temp2.equals(null)))
+           {
+               cont++;
+               fixture.CrearEncuentros(cont, temp.getNombreEquipo() , temp2.getNombreEquipo());
+           }
+            
+       }
+       
    }
    
    /**

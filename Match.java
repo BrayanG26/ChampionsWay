@@ -9,12 +9,13 @@ public class Match
 {
     // instance variables - replace the example below with your own
    
-    private String Participante1;
-    private String Participante2;
-    private String Fecha;
+    private String participante1;
+    private String participante2;
+    private String fecha;
+    private String grupo;
     private int numEncuentro;
-    private int ScoreParticiante1;    
-    private int ScoreParticiante2;
+    private int scoreParticiante1;    
+    private int scoreParticiante2;
     
     
     
@@ -22,12 +23,12 @@ public class Match
     /**
      * Constructor for objects of class Match
      */
-    public Match(int enc, String P1 , String P2, String Fecha)
+    public Match(int enc, String P1 , String P2)
     {
        numEncuentro = enc;
-       Participante1 = P1;
-       Participante2 = P2;
-       this.Fecha = Fecha;
+       participante1 = P1;
+       participante2 = P2;
+       
     }
 
     /**
@@ -37,8 +38,18 @@ public class Match
      */
     public void asignarResultado(int r1 , int r2)
     {
-        ScoreParticiante1 = r1;
-        ScoreParticiante2 = r2;
+        scoreParticiante1 = r1;
+        scoreParticiante2 = r2;
+    }
+    
+    /**
+     * Asigna fecha a un encuentro 
+     * 
+     * @param  y   a sample parameter for a method     
+     */
+    public void asignarFecha(String fecha)
+    {
+        this.fecha = fecha;
     }
     
     /**
@@ -48,9 +59,9 @@ public class Match
      */
     public String mostrarEncuentro()
     {
-        String info = "Encuentro: " + numEncuentro + " \n " + 
-        Participante1 + " " + ScoreParticiante1 + " - "  + ScoreParticiante1 + " " + Participante1 +
-        "\n Fecha: " + Fecha;
+        String info = "Encuentro: " + numEncuentro + " del grupo " + grupo +"\n " + 
+        participante1 + " " + scoreParticiante1 + " - "  + scoreParticiante1 + " " + participante1 +
+        "\n Fecha: " + fecha;
         return info;
     }
 }
