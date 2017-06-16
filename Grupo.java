@@ -23,12 +23,17 @@ public class Grupo
     
     /**
      * Obtiene los equipos inscritos en el torneo
+     * @param eq Equipo para asignar
      */
     public void asignarEquipos(Equipo eq)
     {
         equipos.add(eq);
     }
     
+    /**
+     * Devuelve infomacion del grupo
+     * @return Informacion del grupo
+     */
     public String infoGrupo()
     {
         String info = nombre + "\n" ;
@@ -42,6 +47,7 @@ public class Grupo
 
    /**
      * Muestra los equipos de un grupo
+     * @return equipos de un grupo
      */
     public ArrayList<Equipo> getEquipos()
     {

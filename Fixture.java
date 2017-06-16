@@ -37,7 +37,7 @@ public class Fixture {
     }
 
     /**
-     * xxx-xxx-xxx
+     * Parametriza la informacion para pasarla al metodo permutar
      */
     public void crearEncuentros() {
         String[] elementos = "1,2,3,4,5,6,7,8".split(",");
@@ -47,7 +47,11 @@ public class Fixture {
     }
 
     /**
-     * Permutacion
+     * Permutacion sin repeticion para obtener todos los posibles encuentros entre los diferentes equipos
+     * @param elementos Vector con los elementos o equipos inscritos
+     * @param act Cadena separadora
+     * @param n Numero de elementos escogidos (2 por encuentro)
+     * @param r Numero de elementos disponibles
      */
     private void permutar(String[] elementos, String act, int n, int r) {
         if (n == 0) {

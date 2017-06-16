@@ -32,9 +32,9 @@ public class Match
     }
 
     /**
-     * Asigna resultado del encuentro 
-     * 
-     * @param  y   a sample parameter for a method     
+     * Asigna resultado del encuentro
+     * @param  r1
+     * @param r2     
      */
     public void asignarResultado(int r1 , int r2)
     {
@@ -44,8 +44,7 @@ public class Match
     
     /**
      * Asigna fecha a un encuentro 
-     * 
-     * @param  y   a sample parameter for a method     
+     * @param  fecha Fecha para asignar a un encuentro
      */
     public void asignarFecha(String fecha)
     {
@@ -54,8 +53,7 @@ public class Match
     
     /**
      * Muestra toda informacion  de un encuentro especifico
-     *
-     * @return     String con toda la informacion.
+     * @return Informacion del encuentro
      */
     public String mostrarEncuentro()
     {

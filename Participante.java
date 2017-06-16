@@ -21,16 +21,25 @@ public class Participante
         this.numero = numero;
     }
     
+    /**
+     * @return   nombre del participante
+     */
     public String getNombre()
     {
         return nombre;
     }
     
+    /**
+     * @return   nombre de la carrera a la que pertenece el participante
+     */
     public String getCarrera()
     {
         return carrera;
     }
     
+    /**
+     * @return   numero que identifica al participante
+     */
     public int getNumero()
     {
         return numero;

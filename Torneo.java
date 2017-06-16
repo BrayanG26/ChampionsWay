@@ -35,6 +35,7 @@ public class Torneo
     
     /**
      * Crea un equipo participante del torneo
+     * @param nombre Nombre del equipo
      */
     public void crearEquipo(String nombre)
     {
@@ -43,7 +44,8 @@ public class Torneo
     }
     
     /**
-     * Buscar un equipo participante del torneo por nombre;
+     * Buscar un equipo participante del torneo por nombre
+     * @param num Numero del equipo
      */
     public Equipo buscarEquipo(int num)
     {
@@ -52,6 +54,7 @@ public class Torneo
     
     /**
      * Devuelve el array de equipos del torneo;
+     * @return Equipos inscritos
      */
     public ArrayList<Equipo> getEquipos()
     {
@@ -72,6 +75,7 @@ public class Torneo
     
     /**
      * Crea los grupos de acuerdo a la cantidad de participantes aleatoriamente
+     * @param g Grupo para asignar
      */
     public void crearGrupos(Grupo g)
     {
@@ -91,7 +95,8 @@ public class Torneo
     }
     
     /**
-     * Devuelve el array de grupos del torneo;
+     * Devuelve el array de grupos del torneo
+     * @return Grupos que hay en el torneo
      */
     public ArrayList<Grupo> getGrupos()
     {
@@ -100,7 +105,8 @@ public class Torneo
     
     /**
      *  Asigna los equipos entre los grupos disponibles del torneo
-     * @param <Equipos>,<Grupos> equipos Equipos para sortear, grupos Grupos para sortear
+     * @param equipos Equipos para sortear, 
+     * @param grupos Grupos donde se asignaran los equipos 
      */
     public void gruposRandom(ArrayList<Equipo> equipos , ArrayList<Grupo> grupos)
     {
@@ -123,7 +129,7 @@ public class Torneo
 
     /**
      * Asigna el fixture al torneo
-     *      
+     * @param grupos Grupos para crear el fixture o enfrentamientos
      */
    public void asignarFixture(ArrayList<Grupo> grupos)
    {
@@ -166,7 +172,7 @@ public class Torneo
    
    /**
      * Asigna el nombre al torneo
-     *      
+     * 
      */
    public void setNombre(){}
 }

@@ -16,6 +16,7 @@ public class Equipo
 
     /**
      * Constructor for objects of class Equipo
+     * @param nombre Nombre del equipo
      */
     public Equipo(String nombre)
     {    
@@ -36,6 +37,9 @@ public class Equipo
     
      /**
      * Registrar los participantes individualmente
+     * @param nombre Nombre del participante
+     * @param carrera Nombre de la carrera a la que pertenece el participante
+     * @param numero Numero que identifica al participante
      */
     public void crearParticipante(String nombre , String carrera , int numero)
     {
@@ -51,6 +55,7 @@ public class Equipo
 
     /**
      * Guarda la informacion de los participantes en una coleccion
+     * @param p Participante creado
      */
     public void guardarParticipantes(Participante p)
     {        
@@ -68,16 +73,28 @@ public class Equipo
         }
     }
     
+    /**
+     * Retorna el nombre del equipo
+     * @return El nombre del equipo
+     */
     public String getNombreEquipo()
     {
         return nombreEquipo;
     }
     
+    /**
+     * Define la disponibilidad del equipo para enfrentarse a los demas
+     * @param valor Disponibilidad del equipo
+     */
     public void disponibilidad(boolean valor)
     {
         sorteo = valor;
     }
     
+    /**
+     * Obtiene la disponibilidad del equipo para enfrentarse a los demas
+     * @return Disponibilidad del equipo
+     */
     public boolean getdisponibilidad()
     {
         return sorteo;
