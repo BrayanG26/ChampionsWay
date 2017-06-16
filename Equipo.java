@@ -99,4 +99,13 @@ public class Equipo
     {
         return sorteo;
     }
+
+    /**
+     * Devuelve los miembros de un equipo
+     * @return Miembros del equipo
+     */
+    public ArrayList<Participante> getMiembros()
+    {
+        return miembros;
+    }
 }
