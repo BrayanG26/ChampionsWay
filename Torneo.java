@@ -172,7 +172,16 @@ public class Torneo
    
    /**
      * Asigna el nombre al torneo
-     * 
+     * @param nombre Nombre del torneo
      */
-   public void setNombre(){}
+   public void setNombre(String nombre){
+       this.nombre = nombre;
+   }
+
+   /**
+    * Devuelve el nombre del torneo
+    */
+    public String getNombre(){
+        return this.nombre;
+    }
 }
