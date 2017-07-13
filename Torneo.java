@@ -180,6 +180,7 @@ public class Torneo
 
    /**
     * Devuelve el nombre del torneo
+    * @return nombre Nombre del torneo
     */
     public String getNombre(){
         return this.nombre;
