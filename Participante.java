@@ -45,5 +45,28 @@ public class Participante
         return numero;
     }
 
+    /**
+     * Cambia el nombre del participante
+     * @param nombre Nombre del participante
+     */
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    /**
+     * Cambia la carrera a la que pertenece el participante
+     * @param carrera carrera del participante
+     */
+    public void setCarrera(String carrera){
+        this.carrera = carrera;
+    }
+
+    /**
+     * Cambia el numero con el que compite el participante
+     * @param numero numero del participante
+     */
+     public void setNumero(int numero){
+        this.numero = numero;
+     }
    
 }
