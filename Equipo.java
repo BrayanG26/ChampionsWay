@@ -8,21 +8,23 @@ import java.util.ArrayList;
 public class Equipo
 {
     // instance variables - replace the example below with your own
-    private String nombreEquipo;
-    private boolean sorteo;
+    private String nombreEquipo;  
+    private String IDequipo;
     private Participante pante;
     private ArrayList<Participante> miembros;
+    private int puntos;
+    private int[] VED;
     
 
     /**
      * Constructor for objects of class Equipo
-     * @param nombre Nombre del equipo
      */
     public Equipo(String nombre)
     {    
         this.nombreEquipo = nombre;
-        miembros = new ArrayList<Participante>();
-        sorteo = true;
+        miembros = new ArrayList<Participante>();        
+        VED = new int[3];
+        puntos = 0;
     }
     
     /**
@@ -37,9 +39,6 @@ public class Equipo
     
      /**
      * Registrar los participantes individualmente
-     * @param nombre Nombre del participante
-     * @param carrera Nombre de la carrera a la que pertenece el participante
-     * @param numero Numero que identifica al participante
      */
     public void crearParticipante(String nombre , String carrera , int numero)
     {
@@ -55,7 +54,6 @@ public class Equipo
 
     /**
      * Guarda la informacion de los participantes en una coleccion
-     * @param p Participante creado
      */
     public void guardarParticipantes(Participante p)
     {        
@@ -73,39 +71,61 @@ public class Equipo
         }
     }
     
-    /**
-     * Retorna el nombre del equipo
-     * @return El nombre del equipo
-     */
     public String getNombreEquipo()
     {
         return nombreEquipo;
     }
     
-    /**
-     * Define la disponibilidad del equipo para enfrentarse a los demas
-     * @param valor Disponibilidad del equipo
-     */
-    public void disponibilidad(boolean valor)
+    public String getIDEquipo()
     {
-        sorteo = valor;
+        return IDequipo;
     }
     
-    /**
-     * Obtiene la disponibilidad del equipo para enfrentarse a los demas
-     * @return Disponibilidad del equipo
-     */
-    public boolean getdisponibilidad()
+    public void asignarIDEquipo(String id)
     {
-        return sorteo;
+        IDequipo = id;
     }
-
-    /**
-     * Devuelve los miembros de un equipo
-     * @return Miembros del equipo
-     */
+    
     public ArrayList<Participante> getMiembros()
     {
         return miembros;
     }
+    
+    public String getVEDP()
+    {
+        String info = "";
+        info += "Victorias "+ VED[0] + " Empates "+ VED[1] +" Derrotas "+ VED[2] + " Puntos " + puntos ; 
+        return info;
+    }
+    
+    public void sumarVictoria()
+    {
+        VED[0] = VED[0] + 1;
+        calcularPuntos();
+    }
+    
+    public void sumarEmpate()
+    {
+        VED[1] = VED[1] + 1;
+        calcularPuntos();
+    }
+    
+    public void sumarderrota()
+    {
+        VED[2] = VED[2] + 1;
+        calcularPuntos();
+    }
+    
+   /**
+     * calcula los puntos de un equipo 
+     */
+    public void calcularPuntos()
+   {
+       puntos = VED[0] *3 + VED[1];
+   }
+   
+   public int getPuntos()
+   {
+       return puntos;
+   }
 }

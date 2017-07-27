@@ -13,7 +13,9 @@ public class Match
     private String participante2;
     private String fecha;
     private String grupo;
-    private int numEncuentro;
+    private String ganador;
+    private String perdedor;
+    private int idEncuentro;
     private int scoreParticiante1;    
     private int scoreParticiante2;
     
@@ -23,18 +25,28 @@ public class Match
     /**
      * Constructor for objects of class Match
      */
-    public Match(int enc, String P1 , String P2)
+    public Match( String P1 , String P2)
     {
-       numEncuentro = enc;
+       
+       participante1 = P1;
+       participante2 = P2;
+       
+    }
+    
+    /**
+     * actualizar los participante de un Match
+     */
+    public void actualizarMatch( String P1 , String P2)
+    {
        participante1 = P1;
        participante2 = P2;
        
     }
 
     /**
-     * Asigna resultado del encuentro
-     * @param  r1
-     * @param r2     
+     * Asigna resultado del encuentro 
+     * 
+     * @param  y   a sample parameter for a method     
      */
     public void asignarResultado(int r1 , int r2)
     {
@@ -44,22 +56,90 @@ public class Match
     
     /**
      * Asigna fecha a un encuentro 
-     * @param  fecha Fecha para asignar a un encuentro
+     * 
+     * @param  y   a sample parameter for a method     
      */
     public void asignarFecha(String fecha)
     {
         this.fecha = fecha;
     }
     
+     /**
+     * Asigna id a un encuentro 
+     * 
+     * @param  y   a sample parameter for a method     
+     */
+    public void asignarID(int id)
+    {
+        idEncuentro = id;
+    }
+    
+      /**
+     * Asigna grupo a un encuentro 
+     * 
+     * @param  y   a sample parameter for a method     
+     */
+    public void asignarGrupo(String grupo)
+    {
+        this.grupo = grupo;
+    }
+    
+    public void calcularResultado()
+    {
+        if(scoreParticiante1 > scoreParticiante2)
+        {
+            ganador = participante1;
+            perdedor = participante2; 
+        }else if(scoreParticiante1 < scoreParticiante2)
+        {
+           ganador = participante2;
+           perdedor = participante1; 
+        }else 
+        {
+            ganador = "Empate";
+            perdedor = "Empate";
+        }
+        
+       
+    }
+    
     /**
      * Muestra toda informacion  de un encuentro especifico
-     * @return Informacion del encuentro
+     *
+     * @return     String con toda la informacion.
      */
     public String mostrarEncuentro()
     {
-        String info = "Encuentro: " + numEncuentro + " del grupo " + grupo +"\n " + 
-        participante1 + " " + scoreParticiante1 + " - "  + scoreParticiante1 + " " + participante1 +
+        String info = "Encuentro: " + idEncuentro + " del grupo " + grupo +"\n " + 
+        participante1 + " " + scoreParticiante1 + " - "  + scoreParticiante2 + " " + participante2 +
         "\n Fecha: " + fecha;
         return info;
+    }
+    
+    public String mostrarEncuentrosFinales()
+    {
+        String info = " " + participante1 + " " + scoreParticiante1 + " - "  + scoreParticiante2 + " " + participante2 +
+        "\n Fecha: " + fecha;
+        return info;
+    }
+    
+    public String getParticipante1()
+    {
+        return participante1;
+    }
+    
+    public String getParticipante2()
+    {
+        return participante2;
+    }
+    
+    public String getGanador()
+    {
+        return ganador;
+    }
+    
+    public String getPerdedor()
+    {
+        return perdedor;
     }
 }
